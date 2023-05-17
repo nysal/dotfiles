@@ -38,6 +38,21 @@ Plug 'nysal/cscope-maps'
 call plug#end()
 
 nmap <F8> :TagbarToggle<CR>
+nmap <F7> :NERDTreeToggle<CR>
+
+" -----------Buffer Management---------------
+set hidden " Allow buffers to be hidden if you've modified a buffer
+
+" Move to the next buffer
+nmap <leader>l :bnext<CR>
+" Move to the previous buffer
+nmap <leader>h :bprevious<CR>
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>q :bp <BAR> bd #<CR>
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
+
 
 " Settings for lightline.vim - https://github.com/itchyny/lightline.vim
 set laststatus=2
